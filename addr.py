@@ -79,16 +79,16 @@ print('''
 ''')
 
 
-# SOFTWARE\Microsoft\Windows NT\CurrentVersion\networkcards\3
+# HARDWARE\DESCRIPTION\SYSTEM
 
 print(''' 
-Information from SOFTWARE\Microsoft\Windows NT\CurrentVersion\networkcards\3
-------------------------------------------------------------------------------''')
+Information from HARDWARE\DESCRIPTION\SYSTEM
+---------------------------------------------------------------''')
 
 def reg3():
 	access_reg = winreg.ConnectRegistry(None,winreg.HKEY_LOCAL_MACHINE)
 
-	regkey = winreg.OpenKey(access_reg, r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\networkcards\3")
+	regkey = winreg.OpenKey(access_reg, r"HARDWARE\DESCRIPTION\SYSTEM")
 
 	for n in range(20):
 		try:
@@ -104,16 +104,17 @@ print('''
 ''')
 
 
-# HARDWARE\DESCRIPTION\SYSTEM
+# SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
+
 
 print(''' 
-Information from HARDWARE\DESCRIPTION\SYSTEM
+Information from SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
 ---------------------------------------------------------------''')
 
 def reg4():
 	access_reg = winreg.ConnectRegistry(None,winreg.HKEY_LOCAL_MACHINE)
 
-	regkey = winreg.OpenKey(access_reg, r"HARDWARE\DESCRIPTION\SYSTEM")
+	regkey = winreg.OpenKey(access_reg, r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform")
 
 	for n in range(20):
 		try:
@@ -123,17 +124,14 @@ def reg4():
 			break
 reg4()
 
-
 print(''' 
 
 ''')
 
-
-# SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
-
+# \SOFTWARE\Microsoft\Windows Defender
 
 print(''' 
-Information from SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform
+Information from \SOFTWARE\Microsoft\Windows Defender
 ---------------------------------------------------------------''')
 
 def reg5():
@@ -148,29 +146,6 @@ def reg5():
 		except:
 			break
 reg5()
-
-print(''' 
-
-''')
-
-# \SOFTWARE\Microsoft\Windows Defender
-
-print(''' 
-Information from \SOFTWARE\Microsoft\Windows Defender
----------------------------------------------------------------''')
-
-def reg6():
-	access_reg = winreg.ConnectRegistry(None,winreg.HKEY_LOCAL_MACHINE)
-
-	regkey = winreg.OpenKey(access_reg, r"SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform")
-
-	for n in range(20):
-		try:
-			x = winreg.EnumValue(regkey, n)
-			print(x)
-		except:
-			break
-reg6()
 
 
 
