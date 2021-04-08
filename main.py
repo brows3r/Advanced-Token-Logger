@@ -2,7 +2,6 @@ import os
 import shutil
 import requests
 import socket
-import winreg
 import pyautogui
 import platform
 import psutil
